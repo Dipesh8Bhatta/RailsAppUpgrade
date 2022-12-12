@@ -12,6 +12,16 @@ At this phase, I will be just focusing on the frontend of this application:
 
 * Or create an rails app by using command `rails new RailsAppUpgrade` and then add vue js to the application by `rails -T`  to see the command to add VUE JS on created Rails app.
 
+(You can skip this git setup part. I only put it here since username and password way of authentication is deprecated and along with SSH this token is alternate to do it.)
+After creating the project you need to add it to the git repository. Here is the steps to do that. Hoping to make your ride smooth.
+* Go to the root of the project from terminal and run `git init`.
+* Add all the files `git add .` and commit it `git commit -m 'some comment'`
+* Create a repository in the github and use it link to upload the project created on it. Generate the token from Github profile > Settings > Developer Settings > Personal access tokens > Generate new token > need to select few thigs and go.
+* `git remote set-url origin https://<githubtoken>@github.com/<username>/<repositoryname>.git`
+* `git push -u origin master`
+
+Now we have our code in the repo, I can continue with the rest of the things.
+
 * Add gem to gem file ‘net-http’ to remove warning, then select ruby-2.6.8 and `bundle install`
 
 * Run rails server: `bundle exec rails s` ; run webpacker: `bin/wepack-dev-server`
