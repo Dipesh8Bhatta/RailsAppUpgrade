@@ -34,7 +34,7 @@ Now we have our code in the repo, I can continue with the rest of the things.
 
 * Add vue-turbolinks in node module; `yarn add vue-turbolinks` and fix hello_vue.js file to work with it.
 
-* Add another vue component and page so that we can confirm that vue-turbolinks is working. Now, you will be able to switch between http://127.0.0.1:3000/hello/say_hello and http://127.0.0.1:3000/hello/show_current_time in your local. What I did here can be found from the related commit.
+* Add another vue component and page so that we can confirm that vue-turbolinks is working. Now, you will be able to switch between http://127.0.0.1:3000/hello/say_hello and http://127.0.0.1:3000/hello/show_current_time in your local. What I did here can be found from the related [commit](https://github.com/Dipesh8Bhatta/RailsAppUpgrade/commit/378a2d2a1c7193145ccca18bc20a68da3f9132b0).
 
 * 
 
