@@ -16,6 +16,6 @@
   "version": "0.1.0",
   "devDependencies": {},
   "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets"
+    "build": "node build.js"
   }
 }
