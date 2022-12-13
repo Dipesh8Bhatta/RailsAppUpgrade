@@ -1,6 +1,6 @@
 import TurbolinksAdaptor from 'vue-turbolinks'
 import Vue from 'vue/dist/vue.esm';
-import Stime from "../hello_vue/show_current_time.vue";
+import Stime from "./hello_vue/show_current_time.vue";
 
 Vue.use(TurbolinksAdaptor)
 
