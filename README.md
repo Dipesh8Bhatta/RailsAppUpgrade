@@ -36,6 +36,21 @@ Now we have our code in the repo, I can continue with the rest of the things.
 
 * Add another vue component and page so that we can confirm that vue-turbolinks is working. Now, you will be able to switch between http://127.0.0.1:3000/hello/say_hello and http://127.0.0.1:3000/hello/show_current_time in your local. What I did here can be found from the related [commit](https://github.com/Dipesh8Bhatta/RailsAppUpgrade/commit/378a2d2a1c7193145ccca18bc20a68da3f9132b0).
 
-* 
 
-* ...
+That was the happy scenario with wbepacker. Now, I am replacing it with ESbuild.
+I would like to give credit to my senior [Jesse Chavez](https://github.com/JesseChavez) and [this source](https://www.fastruby.io/blog/esbuild/webpacker/javascript/migrate-from-webpacker-to-esbuild.html) and [that source](https://dev.to/thomasvanholder/how-to-migrate-from-webpacker-to-jsbundling-rails-esbuild-5f2) who guide me in this process.
+
+*  Remove webpacker from Gemfile and `yarn remove @rails/webpacker webpack-dev-server` run this command to remove from node module and package.json
+*  Purge the webpack related files; from bin/ , from config/ , babel, postcss and browserslistrc from root folder.
+*  Add jsbundling-rails in the Gemfile and `bundle install`.
+*  Run the following command to add esbuild `bin/rails javascript:install:esbuild`.
+*  You will run into some errors saying that there is no vue loader. Now, you have to add [esbuild-vue](https://github.com/apeschar/esbuild-vue).
+*  Create build.js and configure it along with package.json taking reference from the plugin documentation and esbuild.
+*  Run the `yarn build`, you will run into some error. To resolve this error;
+*  Move the javascript files from javascript/packs to javascript/ and delte packs folder.
+*  Fix the location of import channels in the application.js.
+*  Run `yarn build`, it shouldn't throw any errors now.
+*  Now run the app `bundle exec rails s` and visit the hello/hello_vue, you will see errors. To fix this Swap pack_tag for include_tag.
+*  Remove the `import "channels"` from app/javascript/application.js and run `yarn build`, and run your application `bundle exec rails s` now everything should work fine.
+
+ 
