@@ -42,3 +42,6 @@ yarn-debug.log*
 #Mac specific files generated that need to ignored.
 .idea/
 .generators
+
+/app/assets/builds/*
+!/app/assets/builds/.keep

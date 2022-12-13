@@ -5,6 +5,7 @@
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
+    "esbuild": "^0.16.4",
     "turbolinks": "^5.2.0",
     "vue": "2.6.14",
     "vue-loader": "15.9.2",
@@ -12,5 +13,8 @@
     "vue-turbolinks": "^2.2.2"
   },
   "version": "0.1.0",
-  "devDependencies": {}
+  "devDependencies": {},
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets"
+  }
 }
