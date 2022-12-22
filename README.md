@@ -17,7 +17,7 @@ After creating the project you need to add it to the git repository. Here is the
 * Go to the root of the project from terminal and run `git init`.
 * Add all the files `git add .` and commit it `git commit -m 'some comment'`
 * Create a repository in the github and use it link to upload the project created on it. Generate the token from Github profile > Settings > Developer Settings > Personal access tokens > Generate new token > need to select few thigs and go.
-* `git remote set-url origin https://<githubtoken>@github.com/<username>/<repositoryname>.git`
+* `git remote add origin https://<githubtoken>@github.com/<username>/<repositoryname>.git`
 * `git push -u origin master`
 
 Now we have our code in the repo, I can continue with the rest of the things.
